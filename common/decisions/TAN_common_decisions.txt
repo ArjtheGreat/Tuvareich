@@ -803,11 +803,11 @@ UFC_decide_category = {
 		days_re_enable = 365
 
 		ai_will_do = {
-			factor = 3
+			factor = 4
 
 			modifier = {
 				factor = 2
-				has_political_power > 175
+				has_political_power > 150
 			}
 			modifier = {
 				add = 3
