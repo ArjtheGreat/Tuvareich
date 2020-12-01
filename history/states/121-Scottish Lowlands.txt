@@ -12,7 +12,6 @@ state={
 			infrastructure = 7
 		}
 		add_core_of = ZZZ
-		add_core_of = SCO
 	}
 
 	provinces={
