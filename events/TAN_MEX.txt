@@ -1,0 +1,38 @@
+add_namespace = TAN_MEX
+
+country_event = { #reclaimed Mexico City
+	id = TAN_MEX.1
+	title = TAN_MEX.1.t
+	desc = TAN_MEX.1.d
+	picture = GFX_report_event_mex_civil_war
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_MEX.1.a #Re-instate MC as the capital
+		set_capital = 277
+		add_timed_idea = {
+			idea = reclaimed_capital
+			days = 180
+		}
+		ai_chance = {
+			base = 5
+			modifier = {
+				has_political_power < 50
+				factor = 2
+			}
+		}
+	}
+
+	option = {
+		name = TAN_MEX.1.b #Keep the current capital
+		add_stability = 0.075
+		ai_chance = {
+			base = 5
+			modifier = {
+				has_stability < 0.25
+				factor = 2
+			}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+add_namespace = TAN_news
+
+news_event = { #10th year anniversary of the Nuclear Fire
+	id = TAN_news.1
+	title = TAN_news.1.t
+	desc = TAN_news.1.d
+	picture = GFX_news_event_nuke
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		date > 1958.5.11
+		SOV = {
+			has_country_flag = SOV_nuclear_regrets
+		}
+	}
+
+	option = {
+		name = TAN_news.1.a #may we hope it never happens again
+	}
+}
