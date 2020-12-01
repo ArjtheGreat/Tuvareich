@@ -11,11 +11,7 @@ state={
 	}
 
 	history={
-		add_core_of = SCO
-		owner = SCO
-		victory_points = {
-			3273 15
-		}
+		owner = ZZZ
 		buildings = {
 			infrastructure = 7
 			industrial_complex = 1
