@@ -1,0 +1,24 @@
+
+state={
+	id=130
+	name="STATE_130"
+	manpower = 4762495
+	
+	state_category = wasteland
+	
+	resources={
+		steel=71 # was: 120
+	}
+
+	history={
+		owner = ZZZ
+		buildings = {
+			infrastructure = 7
+		}
+		add_core_of = ZZZ
+	}
+
+	provinces={
+		6268 9269 9315 9332 9379 9397 11297 11317 11382 
+	}
+}
