@@ -1,0 +1,24 @@
+state=
+{
+	id=766
+	name="STATE_766"
+	manpower = 566600
+	
+	state_category = wasteland
+	
+	history= {
+		owner = ZZZ
+		buildings = {
+			infrastructure = 4
+			dockyard = 1
+			6727 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = ZZZ
+		add_extra_state_shared_building_slots = 1
+	}
+	provinces=
+	{
+3701 3704 6727 6743	}
+}
