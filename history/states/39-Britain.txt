@@ -1,0 +1,28 @@
+
+state={
+	id=39
+	name="STATE_39" # South Tyrol
+	manpower = 641650
+	
+	state_category = wasteland
+	
+	resources={
+		aluminium=14 # was: 22
+	}
+
+	history={
+		owner = ZZZ
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+		}
+
+		add_extra_state_shared_building_slots = 1
+
+		add_core_of = ZZZ
+	}
+
+	provinces={
+		656 6631 6675 9598 9630 11598 11615 
+	}
+}

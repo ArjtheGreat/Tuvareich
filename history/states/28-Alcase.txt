@@ -1,0 +1,20 @@
+
+state={
+	id=28
+	name="STATE_28" # Alsace-Lorraine
+	manpower = 1915600
+	
+	state_category = wasteland
+	resources={
+		steel=100 # was: 236
+	}
+
+	history={
+		owner = ZZZ
+		add_core_of = ZZZ
+	}
+
+	provinces={
+		549 678 1346 3629 6529 9503 9559 11502 
+	}
+}

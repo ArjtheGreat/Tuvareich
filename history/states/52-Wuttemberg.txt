@@ -1,0 +1,23 @@
+
+state={
+	id=52
+	name="STATE_52"
+	manpower = 2679413
+	resources={
+		aluminium=18 # was: 30
+	}
+	
+	state_category = wasteland
+
+	history={
+		owner = ZZZ
+		buildings = {
+			infrastructure = 7
+		}
+		add_core_of = ZZZ
+	}
+
+	provinces={
+		692 707 708 3688 3705 6540 6693 9652 9666 11620 11638 11653 
+	}
+}

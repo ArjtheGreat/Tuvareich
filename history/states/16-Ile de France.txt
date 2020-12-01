@@ -1,0 +1,26 @@
+
+state={
+	id=16
+	name="STATE_16"
+	manpower = 7038500
+	
+	state_category = wasteland
+	
+
+	history={
+		owner = ZZZ
+		buildings = {
+			infrastructure = 8
+			arms_factory = 1
+			industrial_complex = 1
+		}
+
+		add_extra_state_shared_building_slots = 2
+
+		add_core_of = ZZZ
+	}
+
+	provinces={
+		6547 6949 9507 9523 9534 9725 11491 11506 11518 
+	}
+}
