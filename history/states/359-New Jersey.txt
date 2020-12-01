@@ -1,0 +1,22 @@
+
+state={
+	id=359
+	name="STATE_359"
+	manpower = 4041332
+	
+	state_category = wasteland
+
+	history={
+		owner = ZZZ
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = ZZZ
+	}
+
+	provinces={
+		3693 3863 6882 9801 9864 11740 11782 11900 
+	}
+	
+}
