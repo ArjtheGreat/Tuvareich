@@ -1,0 +1,92 @@
+ideas = {
+	
+	country = {
+
+		TAN_influence_1 = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+				communism_drift = 0.1
+				communism_acceptance = 10
+				stability_factor = -0.05
+			}
+		}
+
+		TAN_influence_2 = {
+			name = TAN_influence_1
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+				communism_drift = 0.075
+				stability_factor = -0.05
+			}
+		}
+
+		TAN_influence_3 = {
+			name = TAN_influence_1
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+				communism_drift = 0.05
+				stability_factor = -0.02
+			}
+		}
+
+		TAN_grand_infrastructure_project = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_exploit_mines
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.15
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				political_power_cost = 0.15
+			}
+
+		}
+
+		TAN_heir_of_comintern = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+
+			modifier = {
+				political_power_gain = 0.1
+				drift_defence_factor = 0.5
+				consumer_goods_factor = -0.05
+				trade_opinion_factor = 0.1
+			}
+
+		}
+	}
+}

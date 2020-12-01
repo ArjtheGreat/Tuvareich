@@ -1,0 +1,61 @@
+ideas = {
+	country = {
+
+		RAJ_prince_rule = {
+
+			picture = generic_morale_bonus
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				neutrality_drift = -0.04
+				stability_weekly = -0.002
+				consumer_goods_factor = 0.02
+				political_power_cost = -0.1
+			}
+
+		}
+
+		RAJ_fierce_anti_communism = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_republicans_focus
+			
+			modifier = {
+				communism_drift = -0.05
+				communism_acceptance = -50
+				war_support_factor = 0.05
+			}
+		}
+
+		PAK_agrarian_society = {
+			name = RAJ_agrarian_society 
+			picture = generic_agrarian_society
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = -0.2
+				monthly_population = 0.1
+			}
+		}
+
+	}
+}

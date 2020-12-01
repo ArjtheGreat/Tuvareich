@@ -1,0 +1,859 @@
+UFC_decide_category = {
+	
+	kick_out_company = {
+
+		icon = generic_industry
+
+		available = {
+			OR = {
+				AND = {
+					has_idea = united_fruit_company_minor_influence
+					num_of_factories > 10
+				}
+				has_government = communism
+			}
+		}
+
+		cost = 100
+
+		days_remove = 35
+		days_re_enable = 90
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 2
+				num_of_factories > 15
+			}
+			modifier = {
+				add = 18
+				has_government = communism
+			}
+		}
+
+		modifier = {
+			stability_weekly = 0.01
+			industrial_capacity_factory = -0.1
+			consumer_goods_factor = 0.1
+		}
+
+		complete_effect = {
+			add_stability = -0.075
+		}
+
+		remove_effect = {
+			remove_ideas = united_fruit_company_minor_influence
+			if = {
+				limit = { has_idea = united_fruit_company_puppet_state }
+				remove_ideas = united_fruit_company_puppet_state
+			}
+			if = {
+				limit = { has_idea = united_fruit_company_major_influence }
+				remove_ideas = united_fruit_company_major_influence
+			}
+			if = {
+				limit = { has_idea = united_fruit_company_medium_influence }
+				remove_ideas = united_fruit_company_medium_influence
+			}
+		}
+	}
+
+	restrict_trade = {
+
+		icon = generic_form_nation
+
+		available = {
+			NOT = {
+				has_idea = united_fruit_company_puppet_state
+				has_idea = united_fruit_company_minor_influence
+			}
+			num_of_factories > 3
+		}
+
+		cost = 30
+
+		days_remove = 60
+		days_re_enable = 90
+
+		ai_will_do = {
+			factor = 3
+
+			modifier = {
+				num_of_factories > 12
+				add = 3
+			}
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.08
+			production_speed_buildings_factor = -0.05
+			industrial_capacity_factory = -0.05
+			min_export = -0.1
+		}
+
+		remove_effect = {
+			if = {
+				limit = { has_idea = united_fruit_company_major_influence }
+				swap_ideas = {
+					remove_idea = united_fruit_company_major_influence
+					add_idea = united_fruit_company_medium_influence
+				}
+			}
+			if = {
+				limit = { has_idea = united_fruit_company_medium_influence }
+				swap_ideas = {
+					remove_idea = united_fruit_company_medium_influence
+					add_idea = united_fruit_company_minor_influence
+				}
+			}
+		}
+	}
+
+	reduce_naval_production = {
+
+		icon = generic_naval
+
+		available = {
+			NOT = {
+				has_idea = united_fruit_company_puppet_state
+				has_idea = united_fruit_company_minor_influence
+				num_of_naval_factories < 1
+			}
+		}
+
+		cost = 50
+
+		days_remove = 180
+		days_re_enable = 180
+
+		ai_will_do = {
+			factor = 4
+
+			modifier = {
+				num_of_naval_factories < 4
+				add = 2
+			}
+		}
+
+		modifier = {
+			industrial_capacity_factory = 0.1
+			industrial_capacity_dockyard = -0.15
+		}
+
+		complete_effect = {
+			random_list = {
+				50 = {
+					if = {
+						limit = { has_idea = united_fruit_company_major_influence }
+						swap_ideas = {
+							remove_idea = united_fruit_company_major_influence
+							add_idea = united_fruit_company_medium_influence
+						}
+					}
+					if = {
+						limit = { has_idea = united_fruit_company_medium_influence }
+						swap_ideas = {
+							remove_idea = united_fruit_company_medium_influence
+							add_idea = united_fruit_company_minor_influence
+						}
+					}
+				}
+				50 = {
+					add_political_power = 25
+				}
+			}
+		}
+	}
+
+	support_unions = {
+		icon = generic_political_discourse
+		cost = 75
+
+		available = {
+			NOT = {
+				has_idea = united_fruit_company_puppet_state
+			}
+		}
+
+		days_remove = 45
+		days_re_enable = 85
+
+		modifier = {
+			industrial_capacity_factory = -0.05
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 2
+				communism > 0.1
+			}
+			modifier = {
+				factor = 3
+				communism > 0.2
+			}
+		}
+		fixed_random_seed = no
+		remove_effect = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			if = {
+				limit = { has_idea = united_fruit_company_major_influence }
+				swap_ideas = {
+					remove_idea = united_fruit_company_major_influence
+					add_idea = united_fruit_company_medium_influence
+				}
+			}
+			if = {
+				limit = { has_idea = united_fruit_company_medium_influence }
+				swap_ideas = {
+					remove_idea = united_fruit_company_medium_influence
+					add_idea = united_fruit_company_minor_influence
+				}
+			}
+			random_list = {
+				50 = {
+					add_stability = 0.01
+				}
+				50 = {
+					add_political_power = 25
+				}
+			}
+		}
+	}
+
+	crush_unions = {
+		icon = generic_civil_support
+		cost = 50
+
+		available = {
+			communism > 0.03
+			NOT = {
+				has_government = communism
+			}
+		}
+
+		days_remove = 30
+		days_re_enable = 60
+
+		ai_will_do = {
+			factor = 4
+
+			modifier = {
+				add = 3
+				communism < 0.2
+			}
+			modifier = {
+				add = 3
+				communism > 0.1
+			}
+		}
+
+		modifier = {
+			industrial_capacity_factory = 0.05
+		}
+		fixed_random_seed = no
+		remove_effect = {
+			add_popularity = {
+				ideology = communism
+				popularity = -0.03
+			}
+			add_stability = 0.01
+			random_list = {
+				33 = {
+					add_popularity = {
+						ideology = fascism
+						popularity = 0.02
+					}
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.02
+					}
+				}
+				33 = {
+					if = {
+						limit = { has_idea = united_fruit_company_major_influence }
+						swap_ideas = {
+							remove_idea = united_fruit_company_major_influence
+							add_idea = united_fruit_company_puppet_state
+						}
+					}
+					if = {
+						limit = { has_idea = united_fruit_company_medium_influence }
+						swap_ideas = {
+							remove_idea = united_fruit_company_medium_influence
+							add_idea = united_fruit_company_major_influence
+						}
+					}
+					if = {
+						limit = { has_idea = united_fruit_company_minor_influence }
+						swap_ideas = {
+							remove_idea = united_fruit_company_minor_influence
+							add_idea = united_fruit_company_medium_influence
+						}
+					}
+				}
+			}
+		}
+	}
+
+	use_UFC_infrastructure = {
+
+		icon = generic_construction
+
+		available = {
+			any_owned_state = { 
+				free_building_slots = {
+					building = infrastructure
+					size > 1
+				}
+			}
+			NOT = {
+				has_government = communism
+			}
+		}
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		cost = 25
+		fixed_random_seed = no
+		complete_effect = {
+			random_list = {
+				20 = {
+					if = {
+						limit = { has_idea = united_fruit_company_major_influence }
+						swap_ideas = {
+							remove_idea = united_fruit_company_major_influence
+							add_idea = united_fruit_company_puppet_state
+						}
+					}
+					if = {
+						limit = { has_idea = united_fruit_company_medium_influence }
+						swap_ideas = {
+							remove_idea = united_fruit_company_medium_influence
+							add_idea = united_fruit_company_major_influence
+						}
+					}
+					if = {
+						limit = { has_idea = united_fruit_company_minor_influence }
+						swap_ideas = {
+							remove_idea = united_fruit_company_minor_influence
+							add_idea = united_fruit_company_medium_influence
+						}
+					}
+				}
+				40 = {
+					add_political_power = 10
+				}
+				40 = {
+					add_stability = 0.01
+				}
+			}
+		}
+
+		days_remove = 30
+		days_re_enable = 60
+
+		remove_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	use_UFC_factory_civ = {
+
+		icon = generic_factory
+
+		available = {
+			any_owned_state = { 
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+			}
+			NOT = {
+				has_government = communism
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+
+			modifier = {
+				add = 3
+				num_of_factories < 12
+			}
+		}
+
+		cost = 70
+		fixed_random_seed = no
+		complete_effect = {
+			random_list = {
+				33 = {
+					if = {
+						limit = { has_idea = united_fruit_company_major_influence }
+						swap_ideas = {
+							remove_idea = united_fruit_company_major_influence
+							add_idea = united_fruit_company_puppet_state
+						}
+					}
+					if = {
+						limit = { has_idea = united_fruit_company_medium_influence }
+						swap_ideas = {
+							remove_idea = united_fruit_company_medium_influence
+							add_idea = united_fruit_company_major_influence
+						}
+					}
+					if = {
+						limit = { has_idea = united_fruit_company_minor_influence }
+						swap_ideas = {
+							remove_idea = united_fruit_company_minor_influence
+							add_idea = united_fruit_company_medium_influence
+						}
+					}
+				}
+				33 = {
+					add_political_power = 10
+				}
+				33 = {
+					add_stability = 0.005
+				}
+			}
+		}
+
+		days_remove = 90
+		days_re_enable = 120
+
+		remove_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	use_UFC_factory_mil = {
+
+		icon = generic_industry
+
+		available = {
+			any_owned_state = { 
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			NOT = {
+				has_government = communism
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+
+			modifier = {
+				add = 3
+				num_of_factories < 12
+			}
+		}
+
+		cost = 70
+		fixed_random_seed = no
+		complete_effect = {
+			random_list = {
+				33 = {
+					if = {
+						limit = { has_idea = united_fruit_company_major_influence }
+						swap_ideas = {
+							remove_idea = united_fruit_company_major_influence
+							add_idea = united_fruit_company_puppet_state
+						}
+					}
+					if = {
+						limit = { has_idea = united_fruit_company_medium_influence }
+						swap_ideas = {
+							remove_idea = united_fruit_company_medium_influence
+							add_idea = united_fruit_company_major_influence
+						}
+					}
+					if = {
+						limit = { has_idea = united_fruit_company_minor_influence }
+						swap_ideas = {
+							remove_idea = united_fruit_company_minor_influence
+							add_idea = united_fruit_company_medium_influence
+						}
+					}
+				}
+				33 = {
+					add_political_power = 10
+				}
+
+				33 = {
+					add_stability = 0.005
+				}
+			}
+		}
+
+		days_remove = 90
+		days_re_enable = 120
+
+		remove_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	bribe_government_officials = {
+
+		icon = ger_mefo_bills
+
+		available = {
+			OR = {
+				has_idea = united_fruit_company_minor_influence
+				has_idea = united_fruit_company_medium_influence
+				has_idea = united_fruit_company_major_influence
+			}
+		}
+
+		cost = 60
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		days_remove = 50
+		days_re_enable = 70
+
+		modifier = {
+			fascism_drift = 0.03
+			neutrality_drift = 0.03
+			stability_weekly = -0.015
+		}
+
+		remove_effect = {
+			if = {
+				limit = { has_idea = united_fruit_company_minor_influence }
+				swap_ideas = {
+					remove_idea = united_fruit_company_minor_influence
+					add_idea = united_fruit_company_medium_influence
+				}
+			}
+			if = {
+				limit = { has_idea = united_fruit_company_medium_influence }
+				swap_ideas = {
+					remove_idea = united_fruit_company_medium_influence
+					add_idea = united_fruit_company_major_influence
+				}
+			}
+			add_stability = 0.075
+		}
+	}
+
+	hire_UFC_security_weak = {
+
+		icon = generic_political_discourse
+
+		available = {
+			OR = {
+				has_idea = united_fruit_company_medium_influence
+				has_idea = united_fruit_company_major_influence
+				has_idea = united_fruit_company_puppet_state
+			}
+			NOT = {
+				has_government = communism
+			}
+			has_war = no
+		}
+		fire_only_once = yes
+		cost = 50
+
+		ai_will_do = {
+			factor = 3
+
+			modifier = {
+				threat > 0.1
+				factor = 3
+			}
+		}
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = CHI_hyper_inflation_1
+				days = 75
+			}
+			load_oob = UFC_1
+		}
+
+	}
+
+	hire_UFC_security_medium = {
+
+		icon = generic_army_support
+
+		available = {
+			OR = {
+				has_idea = united_fruit_company_major_influence
+				has_idea = united_fruit_company_puppet_state
+			}
+			NOT = {
+				has_government = communism
+			}
+			has_war = no
+		}
+		fire_only_once = yes
+		cost = 50
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				threat > 0.2
+				factor = 3
+			}
+		}
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = CHI_hyper_inflation_2
+				days = 60
+			}
+			load_oob = UFC_2
+		}
+
+	}
+
+	hire_UFC_security_strong = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_idea = united_fruit_company_puppet_state
+			has_war = no
+			NOT = {
+				has_government = communism
+			}
+		}
+		fire_only_once = yes
+		cost = 50
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				threat > 0.25
+				factor = 3
+			}
+		}
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = CHI_hyper_inflation_3
+				days = 50
+			}
+			load_oob = UFC_3
+		}
+	}
+
+	reassure_investors = {
+
+		icon = generic_political_discourse
+
+		available = {
+			has_stability < 0.5
+			OR = {
+				has_idea = united_fruit_company_medium_influence
+				has_idea = united_fruit_company_major_influence
+				has_idea = united_fruit_company_puppet_state
+			}
+			NOT = {
+				has_government = communism
+			}
+		}
+
+		cost = 35
+
+		ai_will_do = {
+			factor = 3
+
+			modifier = {
+				factor = 3
+				has_stability < 0.25
+			}
+		}
+
+		days_remove = 70
+		days_re_enable = 70
+
+		modifier = {
+			stability_weekly = 0.01
+			min_export = 0.1
+		}
+	}
+
+	establish_new_branch = {
+
+		icon = generic_arms_trade
+
+		available = {
+			has_idea = united_fruit_company_puppet_state
+			has_war = no
+			NOT = {
+				has_government = communism
+			}
+			any_neighbor_country = {
+				NOT = {
+					has_idea = united_fruit_company_minor_influence
+					has_idea = united_fruit_company_medium_influence
+					has_idea = united_fruit_company_major_influence
+					has_idea = united_fruit_company_puppet_state
+					has_government = communism
+					has_war = yes
+				}
+			}
+		}
+		cost = 100
+		days_remove = 90
+		days_re_enable = 365
+
+		ai_will_do = {
+			factor = 3
+
+			modifier = {
+				factor = 2
+				has_political_power > 175
+			}
+			modifier = {
+				add = 3
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			political_power_cost = 0.05
+		}
+		fixed_random_seed = no
+		remove_effect = {
+			random_neighbor_country = {
+				limit = {
+					NOT = {
+						has_idea = united_fruit_company_minor_influence
+						has_idea = united_fruit_company_medium_influence
+						has_idea = united_fruit_company_major_influence
+						has_idea = united_fruit_company_puppet_state
+						original_tag = ZZZ
+						has_war = yes
+						has_government = communism
+					}
+				}
+				add_ideas = united_fruit_company_minor_influence
+			}
+			add_political_power = 150
+			random_list = {
+				50 = {
+					add_offsite_building = {
+						type = arms_factory
+						level = 1
+					}
+				}
+				50 = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 1
+					}
+				}
+			}
+		}
+	}
+
+}

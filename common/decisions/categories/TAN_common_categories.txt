@@ -1,0 +1,26 @@
+UFC_decide_category = {
+	priority = { base = 25 }
+	allowed = {
+		OR = {
+			has_idea = united_fruit_company_minor_influence
+			has_idea = united_fruit_company_medium_influence
+			has_idea = united_fruit_company_major_influence
+			has_idea = united_fruit_company_puppet_state
+		}
+	}
+	visible = {
+		OR = {
+			has_idea = united_fruit_company_minor_influence
+			has_idea = united_fruit_company_medium_influence
+			has_idea = united_fruit_company_major_influence
+			has_idea = united_fruit_company_puppet_state
+		}
+	}
+}
+
+SOV_industrialization_committee = {
+	priority = { base = 20 }
+	allowed = {
+		original_tag = SOV
+	}
+}

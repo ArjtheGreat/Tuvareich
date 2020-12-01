@@ -1,0 +1,1550 @@
+MEX_reconquista_colonization = {
+	
+	retake_mexico_city = {
+
+		available = {
+			has_war = no
+			NOT = {
+				owns_state = 277
+			}
+		}
+
+		visible = {
+			NOT = {
+				owns_state = 277
+			}
+		}
+
+		highlight_state_targets = { state = 277 }
+
+		icon = generic_form_nation
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 3
+
+			modifier = {
+				add = 3
+				date > 1960.1.1
+			}
+		}
+
+		cost = 75
+
+		modifier = {
+			consumer_goods_factor = 0.075
+			political_power_cost = 0.1
+		}
+
+		complete_effect = {
+			add_manpower = -1200
+			hidden_effect = { 
+				ZZZ = {
+					remove_state_core = 277
+				}
+			}
+		}
+			fixed_random_seed = no
+		days_remove = 90
+		remove_effect = {
+			random_list = {
+				25 = {
+					add_manpower = 1000
+				}
+				25 = {
+					add_manpower = 750
+				}
+				25 = {
+					add_manpower = 500
+				}
+				25 = {
+					add_manpower = 100
+				}
+			}
+			transfer_state = 277
+			add_state_core = 277
+			country_event = TAN_MEX.1
+		}
+
+	}
+
+	rebuild_mexico_city = {
+
+		visible = {
+			277 = {
+				is_capital = yes
+			}
+		}
+
+		available = {
+			277 = { 
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+			}
+		}
+
+		icon = generic_construction
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 4
+
+			modifier = {
+				add = 3
+				num_of_factories < 12
+			}
+		}
+
+		highlight_state_targets = { state = 277 }
+
+		cost = 50
+
+		modifier = {
+			consumer_goods_factor = 0.05
+
+		}
+
+		days_remove = 120
+		days_re_enable = 120
+		fixed_random_seed = no
+		remove_effect = {
+			random_list = {
+				25 = {
+					277 = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				25 = {
+					277 = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				25 = {
+					277 = {
+						add_extra_state_shared_building_slots = 1
+					}
+				}
+				25 = {
+					if = {
+						limit = { 277 = { has_state_category = rural } }
+						277 = {
+							set_state_category = town
+						}
+					}
+					if = {
+						limit = { 277 = { has_state_category = town } }
+						277 = {
+							set_state_category = large_town
+						}
+					}
+					if = {
+						limit = { 277 = { has_state_category = large_town } }
+						277 = {
+							set_state_category = city
+						}
+					}
+					if = {
+						limit = { 277 = { has_state_category = city } }
+						277 = {
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+								type = industrial_complex
+								level = 1
+								instant_build = yes
+							}
+						}
+					}
+				}
+			}
+		}
+
+	}
+
+	march_into_guadalajara = {
+
+		available = {
+			has_war = no
+			NOT = {
+				owns_state = 478
+			}
+		}
+
+		visible = {
+			NOT = {
+				owns_state = 478
+			}
+		}
+
+		highlight_state_targets = { state = 478 }
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 2
+				date > 1960.1.1
+			}
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			political_power_cost = 0.05
+		}
+
+		icon = generic_civil_support
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			add_manpower = -750
+			hidden_effect = { 
+				ZZZ = {
+					remove_state_core = 478
+				}
+			}
+		}
+			fixed_random_seed = no
+		days_remove = 90
+		remove_effect = {
+			random_list = {
+				25 = {
+					add_manpower = 750
+				}
+				25 = {
+					add_manpower = 500
+				}
+				25 = {
+					add_manpower = 250
+				}
+				25 = {
+					add_manpower = 100
+				}
+			}
+			transfer_state = 478
+			add_state_core = 478
+			hidden_effect = {
+				478 = {
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+
+	}
+
+	take_tamaulipas = {
+
+		available = {
+			has_war = no
+			NOT = {
+				owns_state = 479
+			}
+		}
+
+		visible = {
+			NOT = {
+				owns_state = 479
+			}
+		}
+
+		highlight_state_targets = { state = 479 }
+
+		icon = generic_civil_support
+
+		fire_only_once = yes
+
+		cost = 50
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			political_power_cost = 0.05
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 2
+				date > 1960.1.1
+			}
+		}
+
+		complete_effect = {
+			add_manpower = -750
+			hidden_effect = { 
+				ZZZ = {
+					remove_state_core = 479
+				}
+			}
+		}
+			fixed_random_seed = no
+		days_remove = 90
+		remove_effect = {
+			random_list = {
+				25 = {
+					add_manpower = 750
+				}
+				25 = {
+					add_manpower = 500
+				}
+				25 = {
+					add_manpower = 250
+				}
+				25 = {
+					add_manpower = 100
+				}
+			}
+			transfer_state = 479
+			add_state_core = 479
+			hidden_effect = {
+				479 = {
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+
+	}
+
+	capture_coahuila = {
+
+		available = {
+			has_war = no
+			NOT = {
+				owns_state = 480
+			}
+		}
+
+		visible = {
+			NOT = {
+				owns_state = 480
+			}
+			OR = {
+				owns_state = 479
+				owns_state = 481
+			}
+		}
+
+		highlight_state_targets = { state = 480 }
+
+		icon = generic_civil_support
+
+		fire_only_once = yes
+
+		cost = 50
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			political_power_cost = 0.05
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 2
+				date > 1960.1.1
+			}
+		}
+
+		complete_effect = {
+			add_manpower = -750
+			hidden_effect = { 
+				ZZZ = {
+					remove_state_core = 480
+				}
+			}
+		}
+			fixed_random_seed = no
+		days_remove = 90
+		remove_effect = {
+			random_list = {
+				25 = {
+					add_manpower = 750
+				}
+				25 = {
+					add_manpower = 500
+				}
+				25 = {
+					add_manpower = 250
+				}
+				25 = {
+					add_manpower = 100
+				}
+			}
+			transfer_state = 480
+			add_state_core = 480
+			hidden_effect = {
+				480 = {
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+
+	}
+
+	claim_durango = {
+
+		available = {
+			has_war = no
+			NOT = {
+				owns_state = 481
+			}
+		}
+
+		visible = {
+			NOT = {
+				owns_state = 481
+			}
+			OR = {
+				owns_state = 478
+				owns_state = 479
+			}
+		}
+
+		highlight_state_targets = { state = 481 }
+
+		icon = generic_civil_support
+
+		fire_only_once = yes
+
+		cost = 50
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			political_power_cost = 0.05
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 2
+				date > 1960.1.1
+			}
+		}
+
+		complete_effect = {
+			add_manpower = -750
+			hidden_effect = { 
+				ZZZ = {
+					remove_state_core = 481
+				}
+			}
+		}
+			fixed_random_seed = no
+		days_remove = 90
+		remove_effect = {
+			random_list = {
+				25 = {
+					add_manpower = 750
+				}
+				25 = {
+					add_manpower = 500
+				}
+				25 = {
+					add_manpower = 250
+				}
+				25 = {
+					add_manpower = 100
+				}
+			}
+			transfer_state = 481
+			add_state_core = 481
+			hidden_effect = {
+				481 = {
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+
+	}
+
+	take_chihuahua = {
+
+		available = {
+			has_war = no
+			NOT = {
+				owns_state = 482
+			}
+		}
+
+		highlight_state_targets = { state = 482 }
+
+		visible = {
+			NOT = {
+				owns_state = 482
+			}
+			OR = {
+				owns_state = 480
+				owns_state = 481
+			}
+		}
+
+		icon = generic_civil_support
+
+		fire_only_once = yes
+
+		cost = 60
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			political_power_cost = 0.05
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 2
+				date > 1960.1.1
+			}
+		}
+
+		complete_effect = {
+			add_manpower = -750
+			hidden_effect = { 
+				ZZZ = {
+					remove_state_core = 482
+				}
+			}
+		}
+			fixed_random_seed = no
+		days_remove = 90
+		remove_effect = {
+			random_list = {
+				25 = {
+					add_manpower = 750
+				}
+				25 = {
+					add_manpower = 500
+				}
+				25 = {
+					add_manpower = 250
+				}
+				25 = {
+					add_manpower = 100
+				}
+			}
+			transfer_state = 482
+			add_state_core = 482
+			hidden_effect = {
+				482 = {
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+
+	}
+
+	seek_sonora = {
+
+		available = {
+			has_war = no
+			NOT = {
+				owns_state = 483
+			}
+		}
+
+		highlight_state_targets = { state = 483 }
+
+		visible = {
+			NOT = {
+				owns_state = 483
+			}
+			OR = {
+				owns_state = 481
+				owns_state = 482
+			}
+		}
+
+		icon = generic_civil_support
+
+		fire_only_once = yes
+
+		cost = 75
+		modifier = {
+			consumer_goods_factor = 0.05
+			political_power_cost = 0.05
+		}
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 2
+				date > 1960.1.1
+			}
+		}
+		complete_effect = {
+			add_manpower = -750
+			hidden_effect = { 
+				ZZZ = {
+					remove_state_core = 483
+				}
+			}
+		}
+		fixed_random_seed = no
+		days_remove = 90
+		remove_effect = {
+			random_list = {
+				25 = {
+					add_manpower = 750
+				}
+				25 = {
+					add_manpower = 500
+				}
+				25 = {
+					add_manpower = 250
+				}
+				25 = {
+					add_manpower = 100
+				}
+			}
+			transfer_state = 483
+			add_state_core = 483
+			hidden_effect = {
+				483 = {
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+	}
+	march_into_baja = {
+		available = {
+			has_war = no
+			NOT = {
+				owns_state = 484
+			}
+		}
+		highlight_state_targets = { state = 484 }
+		visible = {
+			NOT = {
+				owns_state = 484
+			}
+			owns_state = 483
+		}
+		icon = generic_civil_support
+		fire_only_once = yes
+		cost = 75
+		modifier = {
+			consumer_goods_factor = 0.05
+			political_power_cost = 0.05
+		}
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 2
+				date > 1960.1.1
+			}
+		}
+		complete_effect = {
+			add_manpower = -750
+			hidden_effect = { 
+				ZZZ = {
+					remove_state_core = 484
+				}
+			}
+		}
+		fixed_random_seed = no
+		days_remove = 90
+		remove_effect = {
+			random_list = {
+				25 = {
+					add_manpower = 750
+				}
+				25 = {
+					add_manpower = 500
+				}
+				25 = {
+					add_manpower = 250
+				}
+				25 = {
+					add_manpower = 100
+				}
+			}
+			transfer_state = 484
+			add_state_core = 484
+			hidden_effect = {
+				484 = {
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+	}
+}
+
+SOV_over_urals_colonization = {
+
+	pressing_into_perm = {
+
+		available = {
+			has_war = no
+			NOT = {
+				owns_state = 398
+			}
+		}
+
+		visible = {
+			NOT = {
+				owns_state = 398
+			}
+		}
+
+		highlight_state_targets = { state = 398 }
+
+		ai_will_do = {
+			factor = 3
+
+			modifier = {
+				add = 2
+				date > 1960.1.1
+			}
+			modifier = {
+				factor = 2
+				has_idea = SOV_ural_expansion_center
+			}
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			political_power_cost = 0.05
+		}
+
+		icon = generic_civil_support
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			add_manpower = -750
+			hidden_effect = { 
+				ZZZ = {
+					remove_state_core = 398
+				}
+			}
+		}
+		days_remove = 90
+		remove_effect = {
+			transfer_state = 398
+			add_state_core = 398
+			hidden_effect = {
+				398 = {
+					add_extra_state_shared_building_slots = 1
+					add_victory_points = {
+    					province = 7375
+    					value = 2    
+					}
+				}
+
+			}
+		}
+
+	}
+
+	ushering_into_ufa = {
+
+		available = {
+			has_war = no
+			NOT = {
+				owns_state = 651
+			}
+		}
+
+		visible = {
+			NOT = {
+				owns_state = 651
+			}
+		}
+
+		highlight_state_targets = { state = 651 }
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 2
+				date > 1960.1.1
+			}
+			modifier = {
+				factor = 2
+				has_idea = SOV_ural_expansion_center
+			}
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			political_power_cost = 0.05
+		}
+
+		icon = generic_civil_support
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			add_manpower = -750
+			hidden_effect = { 
+				ZZZ = {
+					remove_state_core = 651
+				}
+			}
+		}
+		days_remove = 75
+		remove_effect = {
+			transfer_state = 651
+			add_state_core = 651
+			hidden_effect = {
+				651 = {
+					add_extra_state_shared_building_slots = 1
+				}
+
+			}
+		}
+
+	}
+
+	overtaking_orenburg = {
+
+		available = {
+			has_war = no
+			NOT = {
+				owns_state = 652
+			}
+		}
+
+		visible = {
+			NOT = {
+				owns_state = 652
+			}
+		}
+
+		highlight_state_targets = { state = 652 }
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 2
+				date > 1960.1.1
+			}
+			modifier = {
+				factor = 2
+				has_idea = SOV_ural_expansion_center
+			}
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			political_power_cost = 0.05
+		}
+
+		icon = generic_civil_support
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			add_manpower = -750
+			hidden_effect = { 
+				ZZZ = {
+					remove_state_core = 652
+				}
+			}
+		}
+		days_remove = 75
+		remove_effect = {
+			transfer_state = 652
+			add_state_core = 652
+			hidden_effect = {
+				652 = {
+					add_extra_state_shared_building_slots = 1
+				}
+
+			}
+		}
+
+	}
+
+	prospecting_pechora_oil = {
+
+		available = {
+			has_war = no
+			NOT = {
+				owns_state = 262
+			}
+		}
+
+		visible = {
+			NOT = {
+				owns_state = 262
+			}
+		}
+
+		highlight_state_targets = { state = 262 }
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 2
+				date > 1960.1.1
+			}
+			modifier = {
+				factor = 2
+				has_idea = SOV_ural_expansion_center
+			}
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			political_power_cost = 0.05
+		}
+
+		icon = generic_civil_support
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			add_manpower = -500
+			hidden_effect = { 
+				ZZZ = {
+					remove_state_core = 262
+				}
+			}
+		}
+		days_remove =75
+		remove_effect = {
+			transfer_state = 262
+			add_state_core = 262
+			hidden_effect = {
+				262 = {
+					add_extra_state_shared_building_slots = 1
+				}
+
+			}
+		}
+
+	}
+
+	seizing_syktyvkar = {
+
+		available = {
+			has_war = no
+			NOT = {
+				owns_state = 397
+			}
+		}
+
+		visible = {
+			NOT = {
+				owns_state = 397
+			}
+		}
+
+		highlight_state_targets = { state = 397 }
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 2
+				date > 1960.1.1
+			}
+			modifier = {
+				factor = 2
+				has_idea = SOV_ural_expansion_center
+			}
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			political_power_cost = 0.05
+		}
+
+		icon = generic_civil_support
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			add_manpower = -600
+			hidden_effect = { 
+				ZZZ = {
+					remove_state_core = 397
+				}
+			}
+		}
+		days_remove = 75
+		remove_effect = {
+			transfer_state = 397
+			add_state_core = 397
+			hidden_effect = {
+			397 = {
+					add_extra_state_shared_building_slots = 1
+				}
+
+			}
+		}
+
+	}
+
+	taking_kirov = {
+
+		available = {
+			has_war = no
+			NOT = {
+				owns_state = 400
+			}
+		}
+
+		visible = {
+			NOT = {
+				owns_state = 400
+			}
+			400 = {
+				any_neighbor_state = {
+					is_controlled_by = SOV
+				}
+			}
+		}
+
+		highlight_state_targets = { state = 400 }
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 2
+				date > 1960.1.1
+			}
+			modifier = {
+				factor = 2
+				has_idea = SOV_ural_expansion_center
+			}
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			political_power_cost = 0.05
+		}
+
+		icon = generic_civil_support
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			add_manpower = -750
+			hidden_effect = { 
+				ZZZ = {
+					remove_state_core = 400
+				}
+			}
+		}
+		days_remove = 75
+		remove_effect = {
+			transfer_state = 400
+			add_state_core = 400
+			hidden_effect = {
+				400 = {
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+
+	}
+
+	into_izhevsk = {
+
+		available = {
+			has_war = no
+			NOT = {
+				owns_state = 399
+			}
+		}
+
+		visible = {
+			NOT = {
+				owns_state = 399
+			}
+			399 = {
+				any_neighbor_state = {
+					is_controlled_by = SOV
+				}
+			}
+		}
+
+		highlight_state_targets = { state = 399 }
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 2
+				date > 1960.1.1
+			}
+			modifier = {
+				factor = 2
+				has_idea = SOV_ural_expansion_center
+			}
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			political_power_cost = 0.05
+		}
+
+		icon = generic_civil_support
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			add_manpower = -750
+			hidden_effect = { 
+				ZZZ = {
+					remove_state_core = 399
+				}
+			}
+		}
+		days_remove = 75
+		remove_effect = {
+			transfer_state = 399
+			add_state_core = 399
+			hidden_effect = {
+			399 = {
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+
+	}
+
+	taking_kazan = {
+
+		available = {
+			has_war = no
+			NOT = {
+				owns_state = 249
+			}
+		}
+
+		visible = {
+			NOT = {
+				owns_state = 249
+			}
+			249 = {
+				any_neighbor_state = {
+					is_controlled_by = SOV
+				}
+			}
+		}
+
+		highlight_state_targets = { state = 249 }
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 2
+				date > 1960.1.1
+			}
+			modifier = {
+				factor = 2
+				has_idea = SOV_ural_expansion_center
+			}
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			political_power_cost = 0.05
+		}
+
+		icon = generic_civil_support
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			add_manpower = -750
+			hidden_effect = { 
+				ZZZ = {
+					remove_state_core = 249
+				}
+			}
+		}
+		days_remove = 90
+		remove_effect = {
+			transfer_state = 249
+			add_state_core = 249
+			hidden_effect = {
+				249 = {
+					add_extra_state_shared_building_slots = 1
+					set_state_category = town
+				}
+			}
+		}
+
+	}
+
+	unto_uralsk = {
+
+		available = {
+			has_war = no
+			NOT = {
+				owns_state = 407
+			}
+		}
+
+		visible = {
+			NOT = {
+				owns_state = 407
+			}
+			407 = {
+				any_neighbor_state = {
+					is_controlled_by = SOV
+				}
+			}
+		}
+
+		highlight_state_targets = { state = 407 }
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 2
+				date > 1960.1.1
+			}
+			modifier = {
+				factor = 2
+				has_idea = SOV_ural_expansion_center
+			}
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			political_power_cost = 0.05
+		}
+
+		icon = generic_civil_support
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			add_manpower = -750
+			hidden_effect = { 
+				ZZZ = {
+					remove_state_core = 407
+				}
+			}
+		}
+		days_remove = 75
+		remove_effect = {
+			transfer_state = 407
+			add_state_core = 407
+			hidden_effect = {
+				407 = {
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+
+	}
+
+	entering_engels = {
+
+		available = {
+			has_war = no
+			NOT = {
+				owns_state = 401
+			}
+		}
+
+		visible = {
+			NOT = {
+				owns_state = 401
+			}
+			401 = {
+				any_neighbor_state = {
+					is_controlled_by = SOV
+				}
+			}
+		}
+
+		highlight_state_targets = { state = 401 }
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 2
+				date > 1960.1.1
+			}
+			modifier = {
+				factor = 2
+				has_idea = SOV_ural_expansion_center
+			}
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			political_power_cost = 0.05
+		}
+
+		icon = generic_civil_support
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			add_manpower = -750
+			hidden_effect = { 
+				ZZZ = {
+					remove_state_core = 401
+				}
+			}
+		}
+		days_remove = 75
+		remove_effect = {
+			transfer_state = 401
+			add_state_core = 401
+			hidden_effect = {
+				401 = {
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+
+	}
+
+	unto_ulyanovsky = {
+
+		available = {
+			has_war = no
+			NOT = {
+				owns_state = 250
+			}
+		}
+
+		visible = {
+			NOT = {
+				owns_state = 250
+			}
+			250 = {
+				any_neighbor_state = {
+					is_controlled_by = SOV
+				}
+			}
+		}
+
+		highlight_state_targets = { state = 250 }
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 2
+				date > 1960.1.1
+			}
+			modifier = {
+				factor = 2
+				has_idea = SOV_ural_expansion_center
+			}
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			political_power_cost = 0.05
+		}
+
+		icon = generic_civil_support
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			add_manpower = -750
+			hidden_effect = { 
+				ZZZ = {
+					remove_state_core = 250
+				}
+			}
+		}
+		days_remove = 75
+		remove_effect = {
+			transfer_state = 250
+			add_state_core = 250
+			hidden_effect = {
+				250 = {
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+
+	}
+
+	take_kuibyshev = {
+
+		available = {
+			has_war = no
+			NOT = {
+				owns_state = 251
+			}
+		}
+
+		visible = {
+			NOT = {
+				owns_state = 251
+			}
+			251 = {
+				any_neighbor_state = {
+					is_controlled_by = SOV
+				}
+			}
+		}
+
+		highlight_state_targets = { state = 251 }
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 2
+				date > 1960.1.1
+			}
+			modifier = {
+				factor = 2
+				has_idea = SOV_ural_expansion_center
+			}
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			political_power_cost = 0.05
+		}
+
+		icon = generic_civil_support
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			add_manpower = -750
+			hidden_effect = { 
+				ZZZ = {
+					remove_state_core = 251
+				}
+			}
+		}
+		days_remove = 75
+		remove_effect = {
+			transfer_state = 251
+			add_state_core = 251
+			hidden_effect = {
+				251 = {
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+
+	}
+
+	check_out_cheboksary = {
+
+		available = {
+			has_war = no
+			NOT = {
+				owns_state = 256
+			}
+		}
+
+		visible = {
+			NOT = {
+				owns_state = 256
+			}
+			250 = {
+				any_neighbor_state = {
+					is_controlled_by = SOV
+				}
+			}
+		}
+
+		highlight_state_targets = { state = 256 }
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 2
+				date > 1960.1.1
+			}
+			modifier = {
+				factor = 2
+				has_idea = SOV_ural_expansion_center
+			}
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			political_power_cost = 0.05
+		}
+
+		icon = generic_civil_support
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			add_manpower = -750
+			hidden_effect = { 
+				ZZZ = {
+					remove_state_core = 256
+				}
+			}
+		}
+		days_remove = 75
+		remove_effect = {
+			transfer_state = 256
+			add_state_core = 256
+			hidden_effect = {
+				256 = {
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+
+	}
+
+}

@@ -1,0 +1,1080 @@
+SOV_industrialization_committee = {
+	
+	sverdlovsk_civ_factory = {
+
+		icon = generic_factory
+
+		available = {
+			653 = { 
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+			}
+			has_completed_focus = SOV_give_committee_civ_powers
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 2
+				num_of_factories < 30
+			}
+			modifier = {
+				factor = 2
+				num_of_factories < 25
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		days_remove = 50
+
+		modifier = {
+			industrial_capacity_factory = -0.1
+			production_speed_buildings_factor = -0.05
+		}
+
+		remove_effect = {
+			653 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+
+	sverdlovsk_mil_factory = {
+
+		icon = generic_industry
+
+		available = {
+			653 = { 
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			has_completed_focus = SOV_give_committee_mil_powers
+		}
+
+		visible = {
+			has_completed_focus = SOV_give_committee_mil_powers
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 2
+				num_of_factories < 30
+			}
+			modifier = {
+				factor = 2
+				num_of_factories < 25
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		days_remove = 50
+
+		modifier = {
+			industrial_capacity_factory = -0.1
+			production_speed_buildings_factor = -0.05
+		}
+
+		remove_effect = {
+			653 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+
+	chelyabinsk_civ_factory = {
+
+		icon = generic_factory
+
+		available = {
+			572 = { 
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+			}
+			has_completed_focus = SOV_give_committee_civ_powers
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 2
+				num_of_factories < 30
+			}
+			modifier = {
+				factor = 2
+				num_of_factories < 25
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		days_remove = 50
+
+		modifier = {
+			industrial_capacity_factory = -0.1
+			production_speed_buildings_factor = -0.05
+		}
+
+		remove_effect = {
+			572 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+
+	chelyabinsk_mil_factory = {
+
+		icon = generic_industry
+
+		available = {
+			572 = { 
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			has_completed_focus = SOV_give_committee_mil_powers
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 2
+				num_of_factories < 30
+			}
+			modifier = {
+				factor = 2
+				num_of_factories < 25
+			}
+		}
+
+		visible = {
+			has_completed_focus = SOV_give_committee_mil_powers
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		days_remove = 50
+
+		modifier = {
+			industrial_capacity_factory = -0.1
+			production_speed_buildings_factor = -0.05
+		}
+
+		remove_effect = {
+			572 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+
+	zlatoust_civ_factory = {
+
+		icon = generic_factory
+
+		available = {
+			573 = { 
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+			}
+			has_completed_focus = SOV_give_committee_civ_powers
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 2
+				num_of_factories < 30
+			}
+			modifier = {
+				factor = 2
+				num_of_factories < 25
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		days_remove = 50
+
+		modifier = {
+			industrial_capacity_factory = -0.1
+			production_speed_buildings_factor = -0.05
+		}
+
+		remove_effect = {
+			573 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+
+	zlatoust_mil_factory = {
+
+		icon = generic_industry
+
+		available = {
+			573 = { 
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			has_completed_focus = SOV_give_committee_mil_powers
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 2
+				num_of_factories < 30
+			}
+			modifier = {
+				factor = 2
+				num_of_factories < 25
+			}
+		}
+
+		visible = {
+			has_completed_focus = SOV_give_committee_mil_powers
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		days_remove = 50
+
+		modifier = {
+			industrial_capacity_factory = -0.1
+			production_speed_buildings_factor = -0.05
+		}
+
+		remove_effect = {
+			573 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+
+	omsk_civ_factory = {
+
+		icon = generic_factory
+
+		available = {
+			571 = { 
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+			}
+			has_completed_focus = SOV_give_committee_civ_powers
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 2
+				num_of_factories < 30
+			}
+			modifier = {
+				factor = 2
+				num_of_factories < 25
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		days_remove = 50
+
+		modifier = {
+			industrial_capacity_factory = -0.1
+			production_speed_buildings_factor = -0.05
+		}
+
+		remove_effect = {
+			571 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+
+	omsk_mil_factory = {
+
+		icon = generic_industry
+
+		available = {
+			571 = { 
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			has_completed_focus = SOV_give_committee_mil_powers
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 2
+				num_of_factories < 30
+			}
+			modifier = {
+				factor = 2
+				num_of_factories < 25
+			}
+		}
+
+		visible = {
+			has_completed_focus = SOV_give_committee_mil_powers
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		days_remove = 50
+
+		modifier = {
+			industrial_capacity_factory = -0.1
+			production_speed_buildings_factor = -0.05
+		}
+
+		remove_effect = {
+			571 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+
+	okhotsk_civ_factory = {
+
+		icon = generic_factory
+
+		available = {
+			562 = { 
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+			}
+			has_completed_focus = SOV_give_committee_civ_powers
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 2
+				num_of_factories < 30
+			}
+			modifier = {
+				factor = 2
+				num_of_factories < 25
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		days_remove = 50
+
+		modifier = {
+			industrial_capacity_factory = -0.1
+			production_speed_buildings_factor = -0.05
+		}
+
+		remove_effect = {
+			562 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+
+	okhotsk_mil_factory = {
+
+		icon = generic_industry
+
+		available = {
+			562 = { 
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			has_completed_focus = SOV_give_committee_mil_powers
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 2
+				num_of_factories < 30
+			}
+			modifier = {
+				factor = 2
+				num_of_factories < 25
+			}
+		}
+
+		visible = {
+			has_completed_focus = SOV_give_committee_mil_powers
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		days_remove = 50
+
+		modifier = {
+			industrial_capacity_factory = -0.1
+			production_speed_buildings_factor = -0.05
+		}
+
+		remove_effect = {
+			562 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+
+	okhotsk_naval_factory = {
+
+		icon = generic_naval
+
+		available = {
+			562 = { 
+				free_building_slots = {
+					building = dockyard
+					size > 2
+					include_locked = yes
+				}
+			}
+			has_completed_focus = SOV_give_committee_naval_powers
+		}
+
+		visible = {
+			has_completed_focus = SOV_give_committee_naval_powers
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 2
+				num_of_factories < 30
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		days_remove = 50
+
+		modifier = {
+			industrial_capacity_factory = -0.1
+			production_speed_buildings_factor = -0.05
+		}
+
+		remove_effect = {
+			562 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+
+	tomsk_civ_factory = {
+
+		icon = generic_factory
+
+		available = {
+			578 = { 
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}
+			}
+			has_completed_focus = SOV_give_committee_civ_powers
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		days_remove = 50
+
+		modifier = {
+			industrial_capacity_factory = -0.1
+			production_speed_buildings_factor = -0.05
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 2
+				num_of_factories < 30
+			}
+			modifier = {
+				factor = 2
+				num_of_factories < 25
+			}
+		}
+
+		remove_effect = {
+			578 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+
+	tomsk_mil_factory = {
+
+		icon = generic_industry
+
+		available = {
+			578 = { 
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			has_completed_focus = SOV_give_committee_mil_powers
+		}
+
+		visible = {
+			has_completed_focus = SOV_give_committee_mil_powers
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 2
+				num_of_factories < 30
+			}
+			modifier = {
+				factor = 2
+				num_of_factories < 25
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		days_remove = 50
+
+		modifier = {
+			industrial_capacity_factory = -0.1
+			production_speed_buildings_factor = -0.05
+		}
+
+		remove_effect = {
+			578 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+
+	found_kirensk = {
+
+	cost = 75
+
+	icon = generic_civil_support
+
+	available = {
+		owns_state = 575
+		has_completed_focus = SOV_give_committee_civ_powers
+	}
+
+	fire_only_once = yes
+
+	days_remove = 180
+
+	modifier = {
+		political_power_cost = 0.1
+		conscription = -0.001
+	}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 3
+				has_political_power > 100
+			}
+			modifier = {
+				factor = 2
+				has_stability > 0.7
+			}
+		}
+
+	remove_effect = {
+		575 = {
+			set_state_category = town
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+			add_victory_points = {
+				province = 7726
+				value = 1
+			}
+			add_manpower = 500000
+		}
+	}
+
+	}
+
+	found_kamchatka = {
+
+	cost = 75
+
+	icon = generic_civil_support
+
+	available = {
+		owns_state = 637
+		has_completed_focus = SOV_give_committee_naval_powers
+	}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 3
+				has_political_power > 100
+			}
+			modifier = {
+				factor = 2
+				has_stability > 0.7
+			}
+		}
+
+	fire_only_once = yes
+
+	days_remove = 180
+
+	modifier = {
+		political_power_cost = 0.1
+		conscription = -0.001
+	}
+
+	remove_effect = {
+		637 = {
+			set_state_category = town
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+			add_victory_points = {
+				province = 4728
+				value = 1
+			}
+			add_manpower = 500000
+		}
+	}
+
+	}
+
+	kamchatka_naval_factory = {
+
+		icon = generic_naval
+
+		available = {
+			637 = { 
+				free_building_slots = {
+					building = dockyard
+					size > 2
+					include_locked = yes
+				}
+			}
+			has_completed_focus = SOV_give_committee_naval_powers
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 2
+				num_of_factories < 30
+			}
+		}
+
+		visible = {
+			has_completed_focus = SOV_give_committee_naval_powers
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		days_remove = 50
+
+		modifier = {
+			industrial_capacity_factory = -0.1
+			production_speed_buildings_factor = -0.05
+		}
+
+		remove_effect = {
+			637 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+
+	develop_yakutsk = {
+
+	cost = 75
+
+	icon = generic_civil_support
+
+	available = {
+		owns_state = 574
+		has_completed_focus = SOV_give_committee_civ_powers
+	}
+
+	fire_only_once = yes
+
+	days_remove = 180
+
+	modifier = {
+		political_power_cost = 0.1
+		conscription = -0.001
+	}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				add = 3
+				has_political_power > 100
+			}
+			modifier = {
+				factor = 2
+				has_stability > 0.7
+			}
+		}
+
+	remove_effect = {
+		574 = {
+			set_state_category = town
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+			add_manpower = 500000
+		}
+	}
+
+	}
+
+	naval_doctrine_research = {
+
+		icon = generic_naval
+
+		available = {
+			has_completed_focus = SOV_give_committee_naval_powers
+		}
+
+		visible = {
+			has_completed_focus = SOV_give_committee_naval_powers
+		}
+
+		cost = 125
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		days_re_enable = 200
+
+		complete_effect = {
+			add_tech_bonus = {
+				name = USA_fund_the_navy
+				uses = 1
+				bonus = 1.0
+				category = naval_doctrine
+			}
+		}
+
+	}
+
+	naval_submarine_research = {
+
+		icon = generic_naval
+
+		available = {
+			has_completed_focus = SOV_give_committee_naval_powers
+		}
+
+		visible = {
+			has_completed_focus = SOV_give_committee_naval_powers
+		}
+
+		cost = 75
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		days_re_enable = 100
+
+		complete_effect = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				uses = 1
+				category = ss_tech
+			}
+		}
+
+	}
+
+	naval_destroyer_research = {
+
+		icon = generic_naval
+
+		available = {
+			has_completed_focus = SOV_give_committee_naval_powers
+		}
+
+		visible = {
+			has_completed_focus = SOV_give_committee_naval_powers
+		}
+
+		cost = 65
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		days_re_enable = 100
+
+		complete_effect = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				uses = 1
+				category = dd_tech
+			}
+		}
+
+	}
+
+	naval_cruiser_research = {
+
+		icon = generic_naval
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			has_completed_focus = SOV_give_committee_naval_powers
+		}
+
+		visible = {
+			has_completed_focus = SOV_give_committee_naval_powers
+		}
+
+		cost = 75
+
+		days_re_enable = 100
+
+		complete_effect = {
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.0
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+
+	}
+
+	naval_capital_research = {
+
+		icon = generic_naval
+
+		available = {
+			has_completed_focus = SOV_give_committee_naval_powers
+		}
+
+		visible = {
+			has_completed_focus = SOV_give_committee_naval_powers
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		cost = 80
+
+		days_re_enable = 100
+
+		complete_effect = {
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				uses = 1
+				category = bc_tech
+				category = bb_tech
+				category = cv_tech
+			}
+		}
+
+	}
+
+}

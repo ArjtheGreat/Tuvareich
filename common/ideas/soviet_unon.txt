@@ -1,0 +1,98 @@
+ideas = {
+
+	country = {
+		SOV_wandering_divisions = {
+
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			picture = generic_manpower_bonus
+
+			modifier = {
+				weekly_manpower = 200
+				conscription = 0.002
+				attrition = -0.05
+				stability_factor = -0.025
+				war_support_factor = -0.025
+			}
+
+		}
+
+		SOV_siberian_cities = {
+
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			picture = generic_goods_red_bonus
+
+			modifier = {
+				winter_attrition_factor = -0.1
+				production_speed_buildings_factor = 0.075
+			}
+		}
+
+		SOV_ural_expansion_center = {
+
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			picture = generic_wall_line
+
+			modifier = {
+				political_power_gain = 0.25
+				consumer_goods_factor = 0.025
+			}
+		}
+
+		SOV_toughened_troops = {
+
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			picture = generic_infantry_bonus
+
+			modifier = {
+				training_time_factor = 0.05
+				terrain_penalty_reduction = 0.1
+				attrition = -0.05
+			}
+
+		}
+
+		SOV_toughened_troops_2 = {
+
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			picture = generic_infantry_bonus
+
+			modifier = {
+				training_time_factor = 0.1
+				terrain_penalty_reduction = 0.15
+				attrition = -0.1
+				conscription = -0.005
+				offence = 0.05
+				defence = 0.05
+			}
+
+		}
+
+	}
+
+
+}

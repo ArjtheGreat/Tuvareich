@@ -1,0 +1,620 @@
+focus_tree = {
+	id = soviet_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 12
+			tag = SOV
+		}
+	}
+	
+	default = no
+
+	focus = {
+		id = SOV_found_industrialization_committee
+		icon = GFX_goal_generic_construct_military
+		x = 2
+		y = 0
+		cost = 5
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_connecting_siberia
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = SOV_found_industrialization_committee }
+		relative_position_id = SOV_found_industrialization_committee
+		x = 2
+		y = 1
+		cost = 5
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_trans_comintern_railway
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = SOV_connecting_siberia }
+		mutually_exclusive = { focus = SOV_soviet_siberian_railway }
+		relative_position_id = SOV_connecting_siberia
+		x = -1
+		y = 1
+		cost = 10
+
+		completion_reward = {
+			MON = {
+				add_opinion_modifier = { target = SOV modifier = HUN_reintegrate_the_railroads }
+			}
+			TAN = {
+				add_opinion_modifier = { target = SOV modifier = HUN_reintegrate_the_railroads }
+			}
+			583 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			404 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			589 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			618 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			330 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			329 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			761 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			561 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			562 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_soviet_siberian_railway
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SOV_connecting_siberia }
+		mutually_exclusive = { focus = SOV_trans_comintern_railway }
+		relative_position_id = SOV_connecting_siberia
+		x = 1
+		y = 1
+		cost = 10
+
+		completion_reward = {
+			403 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			578 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			576 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			575 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			574 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			562 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_give_committee_civ_powers
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = SOV_found_industrialization_committee }
+		relative_position_id = SOV_found_industrialization_committee
+		x = -2
+		y = 1
+		cost = 5
+
+		completion_reward = {
+			add_political_power = 50
+			custom_effect_tooltip = SOV_indust_committee_civ
+		}
+	}
+
+	focus = {
+		id = SOV_give_committee_mil_powers
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SOV_give_committee_civ_powers }
+		relative_position_id = SOV_give_committee_civ_powers
+		x = 0
+		y = 1
+		cost = 5
+
+		completion_reward = {
+			add_political_power = 50
+			#make decisions for expanding military industry
+			custom_effect_tooltip = SOV_indust_committee_mil
+		}
+	}
+
+	focus = {
+		id = SOV_give_committee_naval_powers
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = SOV_give_committee_mil_powers }
+		relative_position_id = SOV_give_committee_mil_powers
+		x = 0
+		y = 1
+		cost = 5
+
+		completion_reward = {
+			add_political_power = 50
+			#make decisions for expanding naval research and industry
+			custom_effect_tooltip = SOV_indust_committee_naval
+		}
+	}
+
+	focus = {
+		id = SOV_found_ural_expansion_department
+		icon = GFX_goal_generic_demand_territory
+		x = 14
+		y = 0
+		cost = 5
+
+		completion_reward = {
+			add_ideas = SOV_ural_expansion_center
+		}
+	}
+
+	focus = {
+		id = SOV_expand_military_focus
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = SOV_found_ural_expansion_department }
+		relative_position_id = SOV_found_ural_expansion_department
+		x = -2
+		y = 1
+		cost = 5
+
+		completion_reward = {
+			army_experience = 10
+			air_experience = 10
+			navy_experience = 10
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = SOV_expand_aviation_focus
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = SOV_expand_military_focus }
+		relative_position_id = SOV_expand_military_focus
+		x = 2
+		y = 1
+		cost = 5
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_air_superiority
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = SOV_expand_aviation_focus }
+		relative_position_id = SOV_expand_aviation_focus
+		x = -1
+		y = 1
+		cost = 10
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.5
+				uses = 3
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_destroying_ground
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = SOV_expand_aviation_focus }
+		relative_position_id = SOV_expand_aviation_focus
+		x = 1
+		y = 1
+		cost = 10
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 0.5
+				uses = 3
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+				category = tactical_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_advanced_aerial_production
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SOV_destroying_ground }
+		prerequisite = { focus = SOV_air_superiority }
+		mutually_exclusive = { focus = SOV_inter_height_warfare }
+		relative_position_id = SOV_air_superiority
+		x = 2
+		y = 1
+		cost = 10
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_inter_height_warfare
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = SOV_destroying_ground }
+		prerequisite = { focus = SOV_air_superiority }
+		mutually_exclusive = { focus = SOV_advanced_aerial_production }
+		relative_position_id = SOV_air_superiority
+		x = 0
+		y = 1
+		cost = 10
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_ground_troops
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = SOV_expand_military_focus }
+		relative_position_id = SOV_expand_military_focus
+		x = -2
+		y = 1
+		cost = 5
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_better_weapons_better_troops
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = SOV_ground_troops }
+		mutually_exclusive = { focus = SOV_armored_division_focus }
+		relative_position_id = SOV_ground_troops
+		x = -1
+		y = 1
+		cost = 10
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 2
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_armored_division_focus
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = SOV_ground_troops }
+		mutually_exclusive = { focus = SOV_better_weapons_better_troops }
+		relative_position_id = SOV_ground_troops
+		x = 1
+		y = 1
+		cost = 10
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_advanced_armor_production
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = SOV_armored_division_focus }
+		relative_position_id = SOV_armored_division_focus
+		x = 0
+		y = 1
+		cost = 10
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_toughen_troops
+		icon = GFX_focus_generic_manpower
+		prerequisite = { focus = SOV_better_weapons_better_troops }
+		relative_position_id = SOV_better_weapons_better_troops
+		x = 0
+		y = 1
+		cost = 10
+
+		completion_reward = {
+			add_ideas = SOV_toughened_troops
+		}
+	}
+
+	focus = {
+		id = SOV_elite_force
+		icon = GFX_focus_generic_manpower
+		prerequisite = { focus = SOV_toughen_troops }
+		mutually_exclusive = { focus = SOV_ensure_loyalty }
+		relative_position_id = SOV_toughen_troops
+		x = 1
+		y = 1
+		cost = 10
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SOV_toughened_troops
+				add_idea = SOV_toughened_troops_2
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_ensure_loyalty
+		icon = GFX_focus_generic_manpower
+		prerequisite = { focus = SOV_toughen_troops }
+		mutually_exclusive = { focus = SOV_elite_force }
+		relative_position_id = SOV_toughen_troops
+		x = -1
+		y = 1
+		cost = 10
+
+		completion_reward = {
+			add_ideas = political_commissars_focus
+			add_political_power = 75
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = SOV_border_tension
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = SOV_found_ural_expansion_department }
+		relative_position_id = SOV_found_ural_expansion_department
+		x = 4
+		y = 1
+		cost = 5
+
+		available = {
+			is_neighbor_of = FIN
+		}
+
+		completion_reward = {
+			add_threat = 2
+		}
+	}
+
+	focus = {
+		id = SOV_deescalation
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = SOV_border_tension }
+		mutually_exclusive = { focus = SOV_reclaiming_former_territories }
+		relative_position_id = SOV_border_tension
+		x = -1
+		y = 1
+		cost = 10
+
+		available = {
+			is_neighbor_of = FIN
+		}
+
+		completion_reward = {
+			add_threat = -1
+			add_opinion_modifier = { target = FIN modifier = border_conflict_reconciled }
+			add_stability = 0.05
+			FIN = { 
+				add_opinion_modifier = { target = SOV modifier = border_conflict_reconciled } 
+				add_stability = 0.05
+			}
+
+		}
+	}
+
+	focus = {
+		id = SOV_reclaiming_former_territories
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = SOV_border_tension }
+		mutually_exclusive = { focus = SOV_deescalation }
+		relative_position_id = SOV_border_tension
+		x = 1
+		y = 1
+		cost = 10
+
+		available = {
+			is_neighbor_of = FIN
+		}
+
+		completion_reward = {
+			add_war_support = 0.05
+			create_wargoal = {
+				target = FIN
+				type = annex_everything
+				expire = 0
+			}
+		}
+	}
+

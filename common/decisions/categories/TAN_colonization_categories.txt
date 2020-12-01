@@ -1,0 +1,26 @@
+MEX_reconquista_colonization = {
+	priority = { base = 50 }
+	allowed = {
+		tag = MEX
+	}
+}
+
+SOV_over_urals_colonization = {
+	icon = border_conflicts
+	priority = { base = 50 }
+	allowed = {
+		tag = SOV
+	}
+}
+
+TUR_taking_balkans_colonization = {
+	priority = { base = 50 }
+	allowed = {
+		tag = TUR
+	}
+}
+
+ITA_peninsular_domination_colonization = {
+	priority = { base = 50 }
+	allowed = { tag = ITA }
+}

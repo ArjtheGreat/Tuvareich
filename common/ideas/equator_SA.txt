@@ -1,0 +1,32 @@
+ideas = {
+	
+	country = {
+
+		ECU_prussia_of_americas = {
+
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			picture = generic_infantry_bonus
+
+			modifier = {
+				conscription_factor = 0.1
+				army_org_factor = 0.05
+				army_leader_start_attack_level = 1
+				army_leader_start_defense_level	= 1
+				army_morale_factor = 0.1
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				breakthrough_factor = 0.025
+				training_time_factor = 0.05
+			}
+		}
+
+
+	}
+
+
+}

@@ -1,0 +1,169 @@
+bookmarks = {
+	bookmark = {
+		name = "TITANS_OF_ASIA_NAME"
+		desc = "TITANS_OF_ASIA_DESC"
+		date = 1958.1.1.12
+		picture = "GFX_select_date_1939"
+		default_country = "TAN"
+		default = yes
+		
+		"TAN"={
+			history = "TAN_TITANS_OF_ASIA_DESC"
+			ideology = communism
+			ideas = {
+				TAN_heir_of_comintern
+				TAN_grand_infrastructure_project
+			}
+			focuses = {
+				
+			}
+		}
+		"MON"={
+			history = "MON_TITANS_OF_ASIA_DESC"
+			ideology = communism
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+		"SOV"={
+			history = "SOV_TITANS_OF_ASIA_DESC"
+			ideology = communism
+			ideas = {
+				SOV_siberian_cities
+				SOV_wandering_divisions
+			}
+			focuses = {
+				
+			}	
+		}
+		"RAJ"={
+			history = "RAJ_TITANS_OF_ASIA_DESC"
+			ideology = neutrality
+			ideas = {
+				RAJ_prince_rule
+				RAJ_fierce_anti_communism
+			}
+			focuses = {
+				
+			}
+		}
+		"MAN"={
+			history = "MAN_TITANS_OF_ASIA_DESC"
+			ideology = neutrality
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+		"PER"={
+			history = "PER_TITANS_OF_ASIA_DESC"
+			ideology = neutrality
+			ideas = {
+				
+			}	
+			focuses = {
+				
+			}		
+		}
+
+		"AST"={
+			history = "AST_TITANS_OF_ASIA_DESC"
+			ideology = democratic
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+
+		"---"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+
+
+		# minors from DLC ####
+		"PAK"={
+			minor = yes
+			history = "PAK_TITANS_OF_ASIA_DESC"
+			ideology = neutrality
+			ideas = {
+				PAK_agrarian_society
+			}
+			focuses = {
+				
+			}
+		}
+
+		"NZL"={
+			minor = yes
+			history = "NZL_TITANS_OF_ASIA_DESC"
+			ideology = neutrality
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+
+		"GXC"={
+			minor = yes
+			history = "WARLORD_TITANS_OF_ASIA_DESC"
+			ideology = neutrality
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+
+		"SHX"={
+			minor = yes
+			history = "WARLORD_TITANS_OF_ASIA_DESC"
+			ideology = neutrality
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+
+		"YUN"={
+			minor = yes
+			history = "WARLORD_TITANS_OF_ASIA_DESC"
+			ideology = neutrality
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+
+		"XSM"={
+			minor = yes
+			history = "WARLORD_TITANS_OF_ASIA_DESC"
+			ideology = neutrality
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+		
+		
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

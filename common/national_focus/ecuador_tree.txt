@@ -1,0 +1,32 @@
+focus_tree = {
+	id = ECU_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = ECU
+		}
+	}
+	
+	default = no
+
+	focus = {
+		id = ECU_state_of_military
+		icon = GFX_goal_generic_axis_build_infantry
+		x = 3
+		y = 0
+		cost = 5
+
+		completion_reward = {
+			army_experience = 20
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}

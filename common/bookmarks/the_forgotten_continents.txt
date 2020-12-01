@@ -1,0 +1,175 @@
+bookmarks = {
+	bookmark = {
+		name = "THE_FORGOTTEN_CONTINENTS_NAME"
+		desc = "THE_FORGOTTEN_CONTINENTS_DESC"
+		date = 1958.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "BRA"
+	
+		BRA = {
+			history = BRA_THE_FORGOTTEN_CONTINENTS_DESC
+			ideology = neutrality
+			ideas={
+				
+			}
+			focuses = {
+				
+			}
+		}
+		EGY = {
+			history = EGY_THE_FORGOTTEN_CONTINENTS_DESC
+			ideology = neutrality
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+		ETH = {
+			history = ETH_THE_FORGOTTEN_CONTINENTS_DESC
+			ideology = neutrality
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+			
+		}
+		MOR = {
+			history = MOR_THE_FORGOTTEN_CONTINENTS_DESC
+			ideology = neutrality
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+		SAF = {
+			history = SAF_THE_FORGOTTEN_CONTINENTS_DESC
+			ideology = democratic
+			ideas={
+				
+			}
+			focuses = {
+				
+			}			
+		}
+		MEX = {
+			history = MEX_THE_FORGOTTEN_CONTINENTS_DESC
+			ideology = neutrality
+			ideas={
+				
+			}	
+			focuses = {
+				
+			}		
+		}
+		ARG = {
+			history = ARG_THE_FORGOTTEN_CONTINENTS_DESC
+			ideology = fascism
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+
+		"---"={
+			history = "OTHER_BLITZKRIEG_DESC"
+		}
+
+		# minors from DLC ####
+		"LIB"={
+			minor = yes
+			history = "LIB_THE_FORGOTTEN_CONTINENTS_DESC"
+			ideology = democratic
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+
+		"MAD"={
+			minor = yes
+			history = "MAD_THE_FORGOTTEN_CONTINENTS_DESC"
+			ideology = democratic
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+
+		"CAY"={
+			minor = yes
+			history = "CAY_THE_FORGOTTEN_CONTINENTS_DESC"
+			ideology = democratic
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+
+		"COL"={
+			minor = yes
+			history = "COL_THE_FORGOTTEN_CONTINENTS_DESC"
+			ideology = democratic
+			ideas = {
+				united_fruit_company_minor_influence
+			}
+			focuses = {
+				
+			}
+		}
+
+		"ECU"={
+			minor = yes
+			history = "ECU_THE_FORGOTTEN_CONTINENTS_DESC"
+			ideology = neutrality
+			ideas = {
+				ECU_prussia_of_americas	
+			}
+			focuses = {
+				
+			}
+		}
+
+		PRU = {
+			history = PRU_THE_FORGOTTEN_CONTINENTS_DESC
+			minor = yes
+			ideology = fascism
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+
+		"ITA"={
+			minor = yes
+			history = "ITA_THE_FORGOTTEN_CONTINENTS_DESC"
+			ideology = communism
+			ideas = {
+			}
+			focuses = {
+				
+			}
+		}
+		
+
+		effect = {
+			randomize_weather = 12345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}
